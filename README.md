@@ -1,43 +1,55 @@
-### 본 페이지는 샘플입니다. 아래의 *[샘플 양식에 포함되어 있는 항목은 필수 기재사항]*   입니다.
-해당 내용은 모두 예시이며 설명이 부족하거나 추가하고싶은 부분이 있으면 개발자님이 추가해서 작성하셔도 무관합니다. (동영상, 이미지, 텍스트 적용 전부 자유)
+# 온누리 (Own-Nuri)
 
-
-# Project name or Logo
 ![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
 
-프로젝트명 또는 프로젝트 로고 이미지 **(택1)**
+## ㅁ 프로잭트 소개
+군장병만을 대상으로한 혜택·이벤트·공모전·대회 등이 (이하, 혜택이라고 총칭하겠다) 생각보다 많이 존재하는 반면, 이를 온전히 활용하는 군장병들의 비율은 그리 높지않은 것으로 보인다. 일례로, 가장 대표적인 자기개발비용의 경우에도 금액 소진을 위해 아직 자기개발비용을 사용하지 않은 장병들에게 개인차원의 격려까지 하고 있는 상황이다.
 
-## 프로잭트 소개
-- 설명 기입
+**온누리는 현 문제의 원인을 저조한 “접근성”이라고 생각한다. 혜택을 이용하기 위해서는 개인의 관심과 노력이 필요하며, 홍보도 원활히 이루어지고 있지 않아  따라서, 군장병들이 각종 혜택, 이 등을 온전히 누렸으면 하는 취지에 모든 혜택들을 한눈에 알아볼 수 있는 혜택지갑을 제공하고자 한다.**
 
+<br/>
 
-## 기능 설명
+## ㅁ 기능 설명
  - 설명 기입
 
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+<br/>
+
+## ㅁ 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+※작성필요※
 * ECMAScript 6 지원 브라우저 사용
 * 권장: Google Chrome 버젼 77 이상
 
-## 기술 스택 (Technique Used) 
-### Server(back-end)
+<br/>
+
+## ㅁ 기술 스택 (Technique Used) 
+### Back-end
+※작성필요※
  -  nodejs, php, java 등 서버 언어 버전 
  - express, laravel, sptring boot 등 사용한 프레임워크 
  - DB 등 사용한 다른 프로그램 
  
 ### Front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
+※작성필요※
+ -  react.js
+ -  Bootstrap
  - 기타 사용한 라이브러리
 
-## 설치 안내 (Installation Process)
+<br/>
+
+## ㅁ 설치 안내 (Installation Process)
+※작성필요※
 ```bash
 $ git clone git주소
 $ yarn or npm install
 $ yarn start or npm run start
 ```
 
-## 프로젝트 사용법 (Getting Started)
+<br/>
+
+## ㅁ 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
+
+※작성필요※
 
 잘 모를 경우
 구글 검색 - 마크다운 문법
@@ -45,10 +57,36 @@ $ yarn start or npm run start
 
  편한 마크다운 에디터를 찾아서 사용
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
- 
-## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+
+<br/>
+
+## ㅁ 팀 정보 (Team Information)
+- 송경호 (s07019@naver.com), Github Id: Goonco
+- 이찬호 (), Github Id: ldhch2
+
+/*
+```
+$ cd Goonco
+$ cat 송경호.json
+
+{
+    "name" : "Song Kyung Ho (s07019@naver.com)",
+    "Github" : "@Goonco",
+    "Role" : ["Front-end"]
+}
+
+$ cd ldhch2
+$ cat 이찬호.json
+
+{
+    "name" : "Lee Chan HO ()",
+    "Github" : "@ldhch2",
+    "Role" : ["Back-end"]
+}
+```
+*/
+
+<br/>
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
