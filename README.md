@@ -64,7 +64,6 @@ $ yarn start or npm run start
 - 송경호 (s07019@naver.com), Github Id: Goonco
 - 이찬호 (), Github Id: ldhch2
 
-/*
 ```
 $ cd Goonco
 $ cat 송경호.json
@@ -84,7 +83,6 @@ $ cat 이찬호.json
     "Role" : ["Back-end"]
 }
 ```
-*/
 
 <br/>
 
