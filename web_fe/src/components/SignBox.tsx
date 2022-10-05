@@ -1,15 +1,24 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-Enum Type {
-
+export enum Type {
+    SignIn,
+    SignUp
 }
 
 interface props {
-    type : 
+    type: Type
 }
 
-const SignBox : React.FC = () => {
-    
+const SignBox: React.FC<props> = ({ type }) => {
+    const pageName : string = type === Type.SignIn ? "Sign In" : "Sign Up";
+
+    return (
+        <div id="SignBox_container">
+            <h1>{pageName} Page</h1>
+            <button><Link to="/dashboard/mostbenefits">Summit</Link></button>
+        </div>
+    )
 }
 
 export default SignBox;
