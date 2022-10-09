@@ -8,26 +8,3 @@
 #App {
     width: 1280px;
 }
-
-#Main_page_container {
-    background: linear-gradient(to right,#154181,#468fff);
-}
-
-#Main_page_section1 {
-    height: 720px;
-}
-
-#Main_page_header {
-    height: 8%;
-}
-#Main_page_content {
-    height: 80%;
-}
-#title {
-    /* font-family: 'SF_IceMango'; */
-    font-family: 'HSSummer';
-    font-size: 13rem;
-}
-#Main_page_footer {
-    height: 12%;
-}

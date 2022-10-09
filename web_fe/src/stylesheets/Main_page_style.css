@@ -1,0 +1,43 @@
+#Main_page_container {
+    background: linear-gradient(to right,#154181,#468fff);
+}
+
+#Main_page_section1 {
+    height: 720px;
+}
+
+#Main_page_header {
+    height: 8%;
+}
+
+#Main_page_content {
+    height: 75%;
+}
+#Main_page_content h1 {
+    /* font-family: 'SF_IceMango'; */
+    font-family: 'HSSummer';
+    font-size: 13rem;
+}
+
+#Main_page_footer {
+    height: 17%;
+}
+#wave {
+    margin-top: -129px;
+    margin-left: -500px;
+    width: 5120px;
+    height: 129px;
+
+    background-image: url(../images/wave.png);
+    animation: waveflow 18s linear infinite;
+}
+
+@keyframes waveflow {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-1280px);
+    }
+}

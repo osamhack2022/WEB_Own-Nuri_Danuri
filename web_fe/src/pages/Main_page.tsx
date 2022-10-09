@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../stylesheets/total.css';
+import '../stylesheets/Main_page_style.css';
 
 import PageIntro from '../components/PageIntro';
 
@@ -9,7 +9,7 @@ const Main_page: React.FC = () => {
         <div id='Main_page_container' className='w-full h-fit'>
 
              {/* ---------------Section #1--------------- */}   
-            <div id="Main_page_section1">
+            <div id="Main_page_section1" className='overflow-hidden'>
 
                 <div id='Main_page_header' className='flex justify-between'>
 
@@ -24,11 +24,12 @@ const Main_page: React.FC = () => {
                 </div>
 
                 <div id='Main_page_content' className='pt-44 text-center text-white relative'>
-                    <h1 id="title">온누리</h1>
-                    <h2 id="subtitle" className='absolute'>헤택의 바다</h2>
+                    <h1>온누리</h1>
+                    <h2 className='absolute'>헤택의 바다</h2>
                 </div>
 
                 <div id='Main_page_footer' className="h-2/6 bg-white">
+                    <div id="wave" className='inline-block'/>
                     <NavLink to='/login'><button className='inline-block bg-white text-blue-500'>Get Started!</button></NavLink>
                 </div>
 
