@@ -15,7 +15,7 @@ const SignBox: React.FC<props> = ({ type }) => {
 
     return (
         <div id="SignBox_container">
-            <h1>{pageName} Page</h1>
+            <h1 className='m-5'>This is {pageName} Page!</h1>
             <button><Link to="/dashboard/mostbenefits">Summit</Link></button>
         </div>
     )

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import './App.css';
+import './stylesheets/total.css';
 
 import Main_page from './pages/Main_page';
 import Login_page from './pages/Login_page';
@@ -16,7 +16,7 @@ import NotFound_page from './pages/NotFound_page';
 
 function App() {
   return (
-    <div className="App">
+    <div className="mx-auto h-fit" id="App">
       <BrowserRouter>
         <Routes>
 
