@@ -1,43 +1,71 @@
-#Main_page_container {
-    background: linear-gradient(to right,#154181,#468fff);
+#Main_container {
+    background: linear-gradient(to right, #154181, #468fff);
 }
 
-#Main_page_section1 {
+#Main_section1 {
     height: 720px;
 }
 
-#Main_page_header {
+#Main_header {
     height: 8%;
 }
 
-#Main_page_content {
+#Main_content {
     height: 75%;
+
+    /* animation: floating 20s linear infinite; */
 }
-#Main_page_content h1 {
-    /* font-family: 'SF_IceMango'; */
+
+#Main_content_titlebox > h1 {
     font-family: 'HSSummer';
     font-size: 13rem;
 }
 
-#Main_page_footer {
+#Main_content_titlebox > h2 {
+    font-family: 'HSSummer';
+    font-size: 2.3rem;
+    left: 32rem;
+    top: -2rem;
+}
+
+
+#Main_footer {
     height: 17%;
 }
-#wave {
-    margin-top: -129px;
-    margin-left: -500px;
+
+.wave {
     width: 5120px;
     height: 129px;
-
     background-image: url(../images/wave.png);
-    animation: waveflow 18s linear infinite;
 }
 
-@keyframes waveflow {
-    from {
-        transform: translate(0);
-    }
+#wave1 {
+    margin-top: -50px;
+    animation: flowingleft 25s linear infinite;
+}
+#wave2 {
+    margin-top: -120px;
+    margin-left: -500px;
+    animation: flowingright 30s linear infinite;
+}
+#wave3 {
+    margin-top: -135px;
+    margin-left: 250px;
+    animation: flowingleft 50s linear infinite;
+}
 
-    to {
-        transform: translate(-1280px);
-    }
+@keyframes flowingleft {
+    from { transform: translate(0); }
+    to { transform: translate(-1280px); }
+}
+
+@keyframes flowingright {
+    from { transform: translate(-2560px); }
+    to { transform: translate(-1280px); }
+}
+
+@keyframes floating {
+    0% { transform: translate(0); }
+    50% { transform: translateY(50px); }
+    100% { transform: translate(0); }
 }
