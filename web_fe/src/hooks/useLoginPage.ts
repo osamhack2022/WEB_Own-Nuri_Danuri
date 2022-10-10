@@ -1,11 +1,12 @@
 // import * as React from 'react';
 
-// interface useLogin_page_returntype {
-
+// interface useLoginPageReturnType {
+//     const 
 // }
 
-// const useLogin_page : React.FC = () => {
-//     return <h1>test</h1>;
-// };
+// const useLoginPage : React.FC<useLoginPageReturnType> = () => {
 
-// export default useLogin_page;
+//     return <h1>TMP</h1>;
+// }
+
+// export default useLoginPage;

@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 export enum Type {
-    SignIn,
-    SignUp
+    Certificate,
+    LogIn,
 }
 
 interface props {
@@ -11,14 +11,37 @@ interface props {
 }
 
 const SignBox: React.FC<props> = ({ type }) => {
-    const pageName : string = type === Type.SignIn ? "Sign In" : "Sign Up";
+    if (type === Type.Certificate) {
+        return (
+            <div id="SignBox_container" className='w-96 bg-green-500'>
+                <label htmlFor='milID' className='block' />
+                <input id='milID' placeholder='군번' type='text' />
 
-    return (
-        <div id="SignBox_container" className='w-96 bg-green-500'>
-            <h1 className='m-5'>This is {pageName} Page!</h1>
-            <button><Link to="/dashboard/mostbenefits">Summit</Link></button>
-        </div>
-    )
+                <label htmlFor='pw' className='block' />
+                <input id='pw' placeholder='비밀번호' type="password" />
+
+                <label htmlFor='armyunit' className='block'>부대 : </label>
+                <select id='armyunit'>
+                    <option>1군단 101정보통신단 운용대대</option>
+                    <option>1군단 본부근무대</option>
+                </select>
+
+                <button className='block'>인증하기</button>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div id="SignBox_container" className='w-96 bg-green-500'>
+                <label htmlFor='milID' className='block' />
+                <input id='milID' placeholder='군번' type='text' />
+
+                <label htmlFor='pw' className='block' />
+                <input id='pw' placeholder='비밀번호' type="password" />
+                <button className='block'><Link to="/dashboard/mostbenefits">로그인</Link></button>
+            </div>
+        )
+    }
 }
 
 export default SignBox;

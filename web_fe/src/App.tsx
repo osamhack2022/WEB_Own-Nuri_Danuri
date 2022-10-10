@@ -12,8 +12,6 @@ import NotFoundPage from './pages/NotFoundPage';
 import Userinfo from './components/UserInfo';
 import MostBenfits from './components/MostBenefits';
 import BenefitList from './components/BenefitList';
-import Community from './components/Community';
-import Hosting from './components/Hosting';
 
 function App() {
   return (
@@ -28,8 +26,6 @@ function App() {
             <Route path="userinfo" element={<Userinfo />} />
             <Route path="mostbenefits" element={<MostBenfits />} />
             <Route path="benefitlist" element={<BenefitList />} />
-            <Route path="community" element={<Community />} />
-            <Route path="hosting" element={<Hosting />} />
           </Route>
 
           <Route path="/*" element={<NotFoundPage />} />
