@@ -1,0 +1,89 @@
+#MainContainer {
+    background: linear-gradient(to right, #154181, #468fff);
+}
+
+#MainSection1 {
+    height: 720px;
+}
+
+#MainHeader {
+    height: 8%;
+}
+
+#MainContent {
+    height: 60%;
+    font-size: 0.7em;
+    /* animation: floating 20s linear infinite; */
+}
+#MainTitle {
+    font-family: 'HSSummer';
+    font-size: 13em;
+}
+#MainSubtitle {
+    font-family: 'HSSummer';
+    font-size: 2.7em;
+    left: 33rem;
+    top: -2rem;
+}
+
+
+#MainFooter {
+    height: 32%;
+}
+
+.MainWave {
+    width: 5120px;
+    height: 129px;
+    background-image: url(../images/wave.png);
+}
+
+#MainWave1 {
+    margin-top: -100px;
+    /* animation: flowingleft 25s linear infinite; */
+}
+
+#MainWave2 {
+    margin-top: -600px;
+    margin-left: -500px;
+    /* animation: flowingright 30s linear infinite; */
+}
+
+#MainWave3 {
+    margin-top: -170px;
+    margin-left: 250px;
+    /* animation: flowingleft 50s linear infinite; */
+}
+
+@keyframes flowingleft {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-1280px);
+    }
+}
+
+@keyframes flowingright {
+    from {
+        transform: translate(-2560px);
+    }
+
+    to {
+        transform: translate(-1280px);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}

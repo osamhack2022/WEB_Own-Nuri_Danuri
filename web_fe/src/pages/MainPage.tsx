@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/Main_page_style.css';
+import '../stylesheets/MainPageStyle.css';
 
 import PageIntro from '../components/PageIntro';
 
 const Main_page: React.FC = () => {
     return (
-        <div id='Main_container' className='w-full h-fit'>
+        <div id='MainContainer' className='w-full h-fit'>
 
             {/* ---------------Section #1--------------- */}
-            <div id="Main_section1" className='overflow-hidden'>
+            <div id="MainSection1" className='overflow-hidden'>
 
-                <div id='Main_header' className='flex justify-between'>
+                <div id='MainHeader' className='flex justify-between'>
 
                     <div className=''>logo</div>
 
@@ -23,19 +23,19 @@ const Main_page: React.FC = () => {
 
                 </div>
 
-                <div id='Main_content' className='overflow-hidden'>
+                <div id='MainContent' className='overflow-hidden'>
                     
-                    <div id="Main_content_titlebox" className='mt-52 text-center text-white relative'>
-                        <h1>온누리</h1>
-                        <h2 className='absolute'>혜택의 바다</h2>
+                    <div className='mt-56 text-center text-white relative'>
+                        <h1 id='MainTitle'>온누리</h1>
+                        <h2 id='MainSubtitle' className='absolute'>혜택의 바다</h2>
                     </div>
 
                 </div>
 
-                <div id='Main_footer' className="opacity-90 bg-white">
-                    <div id="wave1" className='wave inline-block' />
-                    <div id="wave2" className='wave opacity-80 inline-block' />
-                    <div id="wave3" className='wave opacity-60 inline-block' />
+                <div id='MainFooter' className="opacity-90 bg-white">
+                    <div id="MainWave1" className='MainWave inline-block' />
+                    <div id="MainWave2" className='MainWave opacity-80 inline-block' />
+                    <div id="MainWave3" className='MainWave opacity-60 inline-block' />
                     <Link to='/login'><button className='inline-block bg-white text-blue-500'>Get Started!</button></Link>
                 </div>
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
-const Dashboard_page: React.FC = () => {
+const DashboardPage: React.FC = () => {
     return (
         <div id="Dashboard_page_container">
             
@@ -21,4 +21,4 @@ const Dashboard_page: React.FC = () => {
     )
 }
 
-export default Dashboard_page;
+export default DashboardPage;
