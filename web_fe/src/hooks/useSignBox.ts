@@ -1,21 +1,26 @@
 import * as React from 'react';
 
-interface Inputs {
-    milID : string;
-    pw : string;
+export enum SignBoxType {
+    Certificate,
+    LogIn
 }
 
-const initailInputs : Inputs = {
-    milID : '',
-    pw : '',
+interface Inputs {
+    milID: string;
+    pw: string;
+}
+
+const initailInputs: Inputs = {
+    milID: '',
+    pw: '',
 }
 
 interface useSignBoxReturnType {
-    inputs : Inputs;
-    onChange : () => void;
+    inputs: Inputs;
+    onChange: () => void;
 }
 
-const useSignBox : React.FC<useSignBoxReturnType> = () => {
+function useSignBox(): useSignBoxReturnType {
     const [inputs, setInputs] = React.useState<Inputs>(initailInputs);
 
     const onChange = () => {

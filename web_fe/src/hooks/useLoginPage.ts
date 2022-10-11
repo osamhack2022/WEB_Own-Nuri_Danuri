@@ -1,12 +1,21 @@
-// import * as React from 'react';
+import * as React from 'react';
 
-// interface useLoginPageReturnType {
-//     const 
-// }
+interface useLoginPageReturnType {
+    certificate: boolean;
+    toggle: () => void;
 
-// const useLoginPage : React.FC<useLoginPageReturnType> = () => {
+    selectedStyle : string;
+}
 
-//     return <h1>TMP</h1>;
-// }
+function useLoginPage(): useLoginPageReturnType {
+    const selectedStyle = 'inline-block w-2/5 m-1 border-2 rounded-full text-white'
 
-// export default useLoginPage;
+    const [certificate, setType] = React.useState<boolean>(true);
+    function toggle() {
+        setType((prev) => !prev);
+    }
+
+    return { certificate, toggle, selectedStyle };
+}
+
+export default useLoginPage;
