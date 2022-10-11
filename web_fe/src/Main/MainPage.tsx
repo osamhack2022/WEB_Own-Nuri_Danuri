@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png'
-import '../stylesheets/MainPageStyle.css';
+import './MainPageStyle.css';
 
-import PageIntro from '../components/PageIntro';
+import PageIntro from './PageIntro/PageIntro';
 
 const Main_page: React.FC = () => {
     return (
@@ -14,7 +14,10 @@ const Main_page: React.FC = () => {
 
                 <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <img src={logo} alt='OwnNuriLogo' className='w-16 h-16 ml-4 align-middle'/>
+                    <div className="ml-4">
+                        <img src={logo} alt='OwnNuriLogo' className='inline-block w-12 h-12' />
+                        <h2 id='MainLogoTitle' className="inline-block text-white align-middle">OwnNuri</h2>
+                    </div>
 
                     <div className='flex justify-around w-64'>
                         <button>소개</button>
@@ -25,7 +28,7 @@ const Main_page: React.FC = () => {
                 </div>
 
                 <div id='MainContent' className='overflow-hidden'>
-                    
+
                     <div className='mt-56 text-center text-white relative'>
                         <h1 id='MainTitle'>온누리</h1>
                         <h2 id='MainSubtitle' className='absolute'>혜택의 바다</h2>

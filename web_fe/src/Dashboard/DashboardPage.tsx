@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import '../stylesheets/DashboardPageStyle.css'
+import './DashboardPageStyle.css'
 
 const DashboardPage: React.FC = () => {
     return (

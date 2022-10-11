@@ -1,8 +1,8 @@
 import * as React from 'react';
-import '../stylesheets/LoginPageStyle.css'
+import './LoginPageStyle.css'
 
-import SignBox from '../components/SignBox';
-import useLoginPage from '../hooks/useLoginPage';
+import SignBox from './SignBox/SignBox';
+import useLoginPage from './useLoginPage';
 
 const Login_page: React.FC = () => {
     const { certificate, toggle, selectedStyle } = useLoginPage();

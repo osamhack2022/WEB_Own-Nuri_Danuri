@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './stylesheets/Head.css';
 
 // Page Import
-import MainPage from './pages/MainPage';
-import LoginPage from './pages/LoginPage';
-import DashboardPage from './pages/DashboardPage';
-import NotFoundPage from './pages/NotFoundPage';
+import MainPage from './Main/MainPage';
+import LoginPage from './Login/LoginPage';
+import DashboardPage from './Dashboard/DashboardPage';
+import NotFoundPage from './NotFound/NotFoundPage';
 
 // Component Import
-import Userinfo from './components/UserInfo';
-import MostBenfits from './components/MostBenefits';
-import BenefitList from './components/BenefitList';
+import Userinfo from './Dashboard/UserInfo/UserInfo';
+import MostBenfits from './Dashboard/MostBenefit/MostBenefits';
+import BenefitList from './Dashboard/BenefitList/BenefitList';
 
 function App() {
   return (
