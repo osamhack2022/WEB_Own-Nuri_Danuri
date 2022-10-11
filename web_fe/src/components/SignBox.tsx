@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-export enum Type {
-    Certificate,
-    LogIn,
-}
-
 interface props {
-    type: Type
+    certificate : boolean
 }
 
-const SignBox: React.FC<props> = ({ type }) => {
-    if (type === Type.Certificate) {
+const SignBox: React.FC<props> = ({ certificate }) => {
+    if (certificate) {
         return (
             <div id="SignBox_container" className='w-96 bg-green-500'>
                 <label htmlFor='milID' className='block' />

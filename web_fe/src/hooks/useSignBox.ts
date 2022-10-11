@@ -1,5 +1,10 @@
 import * as React from 'react';
 
+export enum SignBoxType {
+    Certificate,
+    LogIn
+}
+
 interface Inputs {
     milID : string;
     pw : string;

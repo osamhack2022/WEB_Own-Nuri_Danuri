@@ -1,12 +1,18 @@
-// import * as React from 'react';
+import * as React from 'react';
 
-// interface useLoginPageReturnType {
-//     const 
-// }
+interface useLoginPageReturnType {
+    certificate: boolean;
+    toggle: () => void;
+}
 
-// const useLoginPage : React.FC<useLoginPageReturnType> = () => {
+function useLoginPage(): useLoginPageReturnType {
+    const [certificate, setType] = React.useState<boolean>(true);
 
-//     return <h1>TMP</h1>;
-// }
+    function toggle() {
+        setType((prev) => !prev);
+    }
 
-// export default useLoginPage;
+    return { certificate, toggle };
+}
+
+export default useLoginPage;
