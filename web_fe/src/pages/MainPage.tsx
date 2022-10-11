@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.png'
 import '../stylesheets/MainPageStyle.css';
 
 import PageIntro from '../components/PageIntro';
@@ -11,11 +12,11 @@ const Main_page: React.FC = () => {
             {/* ---------------Section #1--------------- */}
             <div id="MainSection1" className='overflow-hidden'>
 
-                <div id='MainHeader' className='flex justify-between'>
+                <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <div className=''>logo</div>
+                    <img src={logo} alt='OwnNuriLogo' className='w-16 h-16 ml-4 align-middle'/>
 
-                    <div className='bg-green-100 flex justify-around w-64'>
+                    <div className='flex justify-around w-64'>
                         <button>소개</button>
                         <button>로그인</button>
                         <button>사용신청</button>

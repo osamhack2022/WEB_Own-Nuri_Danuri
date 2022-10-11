@@ -9,8 +9,8 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     if (certificate) {
         return (
             <div id="SignBox_container" className='w-full bg-green-500'>
-                <label htmlFor='milID' className='block' />
-                <input id='milID' placeholder='군번' type='text' />
+                <label htmlFor='MilID' className='block' />
+                <input id='SignMilID' placeholder='군번' type='text' />
 
                 <label htmlFor='pw' className='block' />
                 <input id='pw' placeholder='비밀번호' type="password" />
