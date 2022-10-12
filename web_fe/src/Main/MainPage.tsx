@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/MainPageStyle.css';
+import logo from '../images/logo.png'
+import './MainPageStyle.css';
 
-import PageIntro from '../components/PageIntro';
+import PageIntro from './PageIntro/PageIntro';
 
 const Main_page: React.FC = () => {
     return (
@@ -11,11 +12,14 @@ const Main_page: React.FC = () => {
             {/* ---------------Section #1--------------- */}
             <div id="MainSection1" className='overflow-hidden'>
 
-                <div id='MainHeader' className='flex justify-between'>
+                <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <div className=''>logo</div>
+                    <div className="ml-4">
+                        <img src={logo} alt='OwnNuriLogo' className='inline-block w-12 h-12' />
+                        <h2 id='MainLogoTitle' className="inline-block text-white align-middle">OwnNuri</h2>
+                    </div>
 
-                    <div className='bg-green-100 flex justify-around w-64'>
+                    <div className='flex justify-around w-64'>
                         <button>소개</button>
                         <button>로그인</button>
                         <button>사용신청</button>
@@ -24,7 +28,7 @@ const Main_page: React.FC = () => {
                 </div>
 
                 <div id='MainContent' className='overflow-hidden'>
-                    
+
                     <div className='mt-56 text-center text-white relative'>
                         <h1 id='MainTitle'>온누리</h1>
                         <h2 id='MainSubtitle' className='absolute'>혜택의 바다</h2>

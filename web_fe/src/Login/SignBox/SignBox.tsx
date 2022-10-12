@@ -9,14 +9,14 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     if (certificate) {
         return (
             <div id="SignBox_container" className='w-full bg-green-500'>
-                <label htmlFor='milID' className='block' />
-                <input id='milID' placeholder='군번' type='text' />
+                <label htmlFor='CertMilID' className='block' />
+                <input id='CertMilID' placeholder='군번' type='text' />
 
-                <label htmlFor='pw' className='block' />
-                <input id='pw' placeholder='비밀번호' type="password" />
+                <label htmlFor='CertPw' className='block' />
+                <input id='CertPw' placeholder='비밀번호' type="password" />
 
-                <label htmlFor='armyunit' className='block'>부대 : </label>
-                <select id='armyunit'>
+                <label htmlFor='CertArmyUnit' className='block'>부대 : </label>
+                <select id='CertArmyUnit'>
                     <option>1군단 101정보통신단 운용대대</option>
                     <option>1군단 본부근무대</option>
                 </select>
@@ -28,11 +28,11 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     else {
         return (
             <div id="SignBox_container" className='w-full bg-green-500'>
-                <label htmlFor='milID' className='block' />
-                <input id='milID' placeholder='군번' type='text' />
+                <label htmlFor='LogMilID' className='block' />
+                <input id='LogMilID' placeholder='군번' type='text' />
 
-                <label htmlFor='pw' className='block' />
-                <input id='pw' placeholder='비밀번호' type="password" />
+                <label htmlFor='LogPw' className='block' />
+                <input id='LogPw' placeholder='비밀번호' type="password" />
                 <button className='block'><Link to="/dashboard/mostbenefits">로그인</Link></button>
             </div>
         )

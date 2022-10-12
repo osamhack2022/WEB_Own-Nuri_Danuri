@@ -1,5 +1,6 @@
 #MainContainer {
     background: linear-gradient(to right, #154181, #468fff);
+    font-size: 0.7em;
 }
 
 #MainSection1 {
@@ -7,12 +8,15 @@
 }
 
 #MainHeader {
-    height: 8%;
+    height: 10%;
+}
+#MainLogoTitle {
+    font-family: 'Cafe24Ssurround';
+    font-size: 1.7em;
 }
 
 #MainContent {
     height: 60%;
-    font-size: 0.7em;
     /* animation: floating 20s linear infinite; */
 }
 #MainTitle {
@@ -28,7 +32,7 @@
 
 
 #MainFooter {
-    height: 32%;
+    height: 30%;
 }
 
 .MainWave {
@@ -39,19 +43,19 @@
 
 #MainWave1 {
     margin-top: -100px;
-    /* animation: flowingleft 25s linear infinite; */
+    animation: flowingleft 25s linear infinite;
 }
 
 #MainWave2 {
     margin-top: -600px;
     margin-left: -500px;
-    /* animation: flowingright 30s linear infinite; */
+    animation: flowingright 30s linear infinite;
 }
 
 #MainWave3 {
     margin-top: -170px;
     margin-left: 250px;
-    /* animation: flowingleft 50s linear infinite; */
+    animation: flowingleft 50s linear infinite;
 }
 
 @keyframes flowingleft {
