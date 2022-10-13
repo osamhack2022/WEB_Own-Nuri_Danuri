@@ -1,0 +1,9 @@
+#BenefitCardText {
+    width: 35%;
+}
+
+#BenefitCardImage {
+    width: 65%;
+    background-image: url('../../../images/event_example.png');
+    background-size: cover;
+}
