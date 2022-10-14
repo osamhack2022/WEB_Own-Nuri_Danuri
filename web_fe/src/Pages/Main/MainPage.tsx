@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../Components/Logo/Logo';
+import Modal from '../../Components/Modal/Modal';
+import SignBox from '../Login/SignBox/SignBox';
 import './MainPageStyle.css';
 
 import PageIntro from './PageIntro/PageIntro';
@@ -14,7 +16,7 @@ const Main_page: React.FC = () => {
 
                 <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <Logo/>
+                    <Logo />
 
                     <div id='MainNav' className='flex justify-around mr-4 w-80 text-white'>
                         <Link to='/login'><button className='animate-pulse inline-block text-white'>시작하기</button></Link>
@@ -49,7 +51,7 @@ const Main_page: React.FC = () => {
             </div>
 
             {/* ---------------Section #2--------------- */}
-            <div id='MainSection2' className=''>
+            <div id='MainSection2'>
 
                 <div id='MainIntro'>
                     {/* <PageIntro imgsrc='img1' explanation='explain1' />
@@ -57,6 +59,10 @@ const Main_page: React.FC = () => {
                 </div>
 
             </div>
+
+            <Modal>
+                <SignBox certificate={false}></SignBox>
+            </Modal>
 
         </div>
     )
