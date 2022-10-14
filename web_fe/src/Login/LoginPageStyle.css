@@ -1,6 +1,12 @@
 #LoginContainer{
     height: 720px;
-    background: linear-gradient(to right, rgba(21, 65, 129, 0.7) -0.29%, rgba(70, 143, 255, 0.7) 100%);
+    background: linear-gradient(to right, rgba(21, 65, 129) -0.29%, rgba(70, 143, 255) 100%);
+    font-family: 'GmarketSansMedium';
+    font-size: 0.7em;
+}
+
+#LoginHeader {
+    height: 10%;
 }
 
 #LoginToggleBox {

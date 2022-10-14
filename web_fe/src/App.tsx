@@ -14,7 +14,7 @@ import BenefitList from './Dashboard/BenefitList/BenefitList';
 
 function App() {
   return (
-    <div className="mx-auto h-fit" id="App">
+    <div className="mx-auto overflow-hidden" id="App">
       <BrowserRouter>
         <Routes>
 

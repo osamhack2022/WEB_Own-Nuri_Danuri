@@ -1,28 +1,23 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png'
+import Logo from './Logo/Logo';
 import './MainPageStyle.css';
 
 import PageIntro from './PageIntro/PageIntro';
 
 const Main_page: React.FC = () => {
     return (
-        <div id='MainContainer' className='w-full h-fit'>
+        <div id='MainContainer' className='w-full'>
 
             {/* ---------------Section #1--------------- */}
-            <div id="MainSection1" className='overflow-hidden'>
+            <div id='MainSection1' className='overflow-hidden'>
 
                 <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <div className="ml-4">
-                        <img src={logo} alt='OwnNuriLogo' className='inline-block w-12 h-12' />
-                        <h2 id='MainLogoTitle' className="inline-block text-white align-middle">OwnNuri</h2>
-                    </div>
+                    <Logo/>
 
-                    <div className='flex justify-around w-64'>
-                        <button>소개</button>
-                        <button>로그인</button>
-                        <button>사용신청</button>
+                    <div id='MainNav' className='flex justify-around mr-4 w-80 text-white'>
+                        <Link to='/login'><button className='animate-pulse inline-block text-white'>시작하기</button></Link>
                     </div>
 
                 </div>
@@ -36,21 +31,29 @@ const Main_page: React.FC = () => {
 
                 </div>
 
-                <div id='MainFooter' className="opacity-90 bg-white">
-                    <div id="MainWave1" className='MainWave inline-block' />
-                    <div id="MainWave2" className='MainWave opacity-80 inline-block' />
-                    <div id="MainWave3" className='MainWave opacity-60 inline-block' />
-                    <Link to='/login'><button className='inline-block bg-white text-blue-500'>Get Started!</button></Link>
+                <div id='MainFooter' className='relative opacity-80 bg-white'>
+                    <div id='MainWave1' className='MainWave inline-block absolute' />
+                    <div id='MainWave2' className='MainWave inline-block absolute opacity-60' />
+                    <div id='MainWave3' className='MainWave inline-block absolute opacity-40' />
+
+                    <div className='motion-reduce:animate-bounce absolute bottom-1/4 mx-auto bg-red-500'>
+                        <span className='inline-block bg-red-900'>
+                            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
+                                <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3' />
+                            </svg>
+                        </span>
+                        <span className='inlin-block bg-red-100'>더 알아보기</span>
+                    </div>
                 </div>
 
             </div>
 
             {/* ---------------Section #2--------------- */}
-            <div id="Main_section2" className="bg-gray-500">
+            <div id='MainSection2' className=''>
 
-                <div id='Main_intro'>
-                    <PageIntro imgsrc='img1' explanation='explain1' />
-                    <PageIntro imgsrc='img2' explanation='explain2' />
+                <div id='MainIntro'>
+                    {/* <PageIntro imgsrc='img1' explanation='explain1' />
+                    <PageIntro imgsrc='img2' explanation='explain2' /> */}
                 </div>
 
             </div>

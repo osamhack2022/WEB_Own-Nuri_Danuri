@@ -3,6 +3,8 @@
     font-size: 0.7em;
 }
 
+/* -------------------------- Section #1 -------------------------- */
+
 #MainSection1 {
     height: 720px;
 }
@@ -10,9 +12,8 @@
 #MainHeader {
     height: 10%;
 }
-#MainLogoTitle {
-    font-family: 'Cafe24Ssurround';
-    font-size: 1.7em;
+#MainNav {
+    font-size: 1.4em;
 }
 
 #MainContent {
@@ -42,19 +43,19 @@
 }
 
 #MainWave1 {
-    margin-top: -100px;
+    bottom: 85%;
     animation: flowingleft 25s linear infinite;
 }
 
 #MainWave2 {
-    margin-top: -600px;
-    margin-left: -500px;
+    bottom: 95%;
+    left: -20%;
     animation: flowingright 30s linear infinite;
 }
 
 #MainWave3 {
-    margin-top: -170px;
-    margin-left: 250px;
+    bottom: 80%;
+    left: -40%;
     animation: flowingleft 50s linear infinite;
 }
 
@@ -90,4 +91,11 @@
     100% {
         transform: translate(0);
     }
+}
+
+/* -------------------------- Section #2 -------------------------- */
+
+#MainSection2 {
+    height: 1000px;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
 }

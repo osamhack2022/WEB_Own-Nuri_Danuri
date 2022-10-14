@@ -8,12 +8,11 @@ interface props {
 const SignBox: React.FC<props> = ({ certificate }) => {
     if (certificate) {
         return (
-            <div id="SignBox_container" className='w-full bg-green-500'>
-                <label htmlFor='CertMilID' className='block' />
-                <input id='CertMilID' placeholder='군번' type='text' />
+            <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
 
-                <label htmlFor='CertPw' className='block' />
-                <input id='CertPw' placeholder='비밀번호' type="password" />
+                <input id='CertMilID' placeholder='군번' type='text' className='block mx-auto my-5'/>
+
+                <input id='CertPw' placeholder='비밀번호' type="password" className='block mx-auto my-5'/>
 
                 <label htmlFor='CertArmyUnit' className='block'>부대 : </label>
                 <select id='CertArmyUnit'>
