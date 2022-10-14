@@ -1,13 +1,16 @@
 import * as React from 'react';
+import './MainPageStyle.css';
 import { Link } from 'react-router-dom';
 import Logo from '../../Components/Logo/Logo';
+import PageIntro from './PageIntro/PageIntro';
 import Modal from '../../Components/Modal/Modal';
 import SignBox from '../Login/SignBox/SignBox';
-import './MainPageStyle.css';
 
-import PageIntro from './PageIntro/PageIntro';
+import useModal from '../../Components/Modal/useModal';
 
 const Main_page: React.FC = () => {
+    const {isPoped, togglePop} = useModal();
+
     return (
         <div id='MainContainer' className='w-full'>
 
@@ -19,7 +22,7 @@ const Main_page: React.FC = () => {
                     <Logo />
 
                     <div id='MainNav' className='flex justify-around mr-4 w-80 text-white'>
-                        <Link to='/login'><button className='animate-pulse inline-block text-white'>시작하기</button></Link>
+                        <button onClick={togglePop} className='animate-pulse inline-block text-white'>시작하기</button>
                     </div>
 
                 </div>
@@ -60,7 +63,7 @@ const Main_page: React.FC = () => {
 
             </div>
 
-            <Modal>
+            <Modal isPoped={isPoped} togglePop={togglePop}>
                 <SignBox certificate={false}></SignBox>
             </Modal>
 
