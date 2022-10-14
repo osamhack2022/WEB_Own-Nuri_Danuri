@@ -8,10 +8,11 @@ interface Props {
 }
 
 const Modal: React.FC<Props> = ({children, isPoped, togglePop}) => {
-    if(isPoped){
+    // if(isPoped){
+    if(true){
         return (
             <div id='ModalContainer' className='fixed w-full h-screen top-0 left-0'>
-                <div id='ModalContent' className='absolute top-1/2 left-1/2 w-fit h-fit'>
+                <div id='ModalContent' className='absolute top-1/2 left-1/2'>
                     {children}
                     <button onClick={togglePop}>닫기</button>
                 </div>

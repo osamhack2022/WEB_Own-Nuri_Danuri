@@ -1,12 +1,11 @@
 import * as React from 'react';
 import './MainPageStyle.css';
-import { Link } from 'react-router-dom';
 import Logo from '../../Components/Logo/Logo';
 import PageIntro from './PageIntro/PageIntro';
 import Modal from '../../Components/Modal/Modal';
-import SignBox from '../Login/SignBox/SignBox';
 
 import useModal from '../../Components/Modal/useModal';
+import LoginBox from './Login/LoginBox';
 
 const Main_page: React.FC = () => {
     const {isPoped, togglePop} = useModal();
@@ -64,7 +63,7 @@ const Main_page: React.FC = () => {
             </div>
 
             <Modal isPoped={isPoped} togglePop={togglePop}>
-                <SignBox certificate={false}></SignBox>
+                <LoginBox />
             </Modal>
 
         </div>
