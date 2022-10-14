@@ -1,25 +1,20 @@
 import * as React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-// Page Import
-import MainPage from './Main/MainPage';
-import LoginPage from './Login/LoginPage';
-import DashboardPage from './Dashboard/DashboardPage';
-import NotFoundPage from './NotFound/NotFoundPage';
-
-// Component Import
-import Userinfo from './Dashboard/UserInfo/UserInfo';
-import MostBenfits from './Dashboard/MostBenefit/MostBenefits';
-import BenefitList from './Dashboard/BenefitList/BenefitList';
+import BenefitList from './Pages/Dashboard/BenefitList/BenefitList';
+import DashboardPage from './Pages/Dashboard/DashboardPage';
+import MostBenfits from './Pages/Dashboard/MostBenefit/MostBenefits';
+import Userinfo from './Pages/Dashboard/UserInfo/UserInfo';
+import MainPage from './Pages/Main/MainPage';
+import NotFoundPage from './Pages/NotFound/NotFoundPage';
 
 function App() {
   return (
-    <div className="mx-auto h-fit" id="App">
+    <div className="mx-auto overflow-hidden" id="App">
       <BrowserRouter>
         <Routes>
 
           <Route path="/" element={<MainPage />} />
-          <Route path="login" element={<LoginPage />} />
 
           <Route path="dashboard" element={<DashboardPage />}>
             <Route path="userinfo" element={<Userinfo />} />

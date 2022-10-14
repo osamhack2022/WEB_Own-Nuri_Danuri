@@ -4,7 +4,7 @@ import './DashboardPageStyle.css'
 
 const DashboardPage: React.FC = () => {
     return (
-        <div id='DashContainer' className='overflow-hidden w-full'>
+        <div id='DashContainer' className='overflow-hidden'>
 
             <div id='DashContent' className='mx-auto my-12 w-5/6 h-5/6 bg-red-900'>
                 <div id='DashSidebar' className='w-1/5 bg-yellow-300'>
@@ -25,7 +25,7 @@ const DashboardPage: React.FC = () => {
 
                 </div>
 
-                <div id='DashMainboard' className='w-full'>
+                <div id='DashMainboard' className=''>
                     <Outlet />
                 </div>
             </div>

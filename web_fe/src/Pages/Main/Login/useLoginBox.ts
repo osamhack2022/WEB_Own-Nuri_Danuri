@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface useLoginPageReturnType {
+interface useLoginBoxReturn {
     certificate: boolean;
     toggle: () => void;
 
     selectedStyle : string;
 }
 
-function useLoginPage(): useLoginPageReturnType {
+function useLoginPage(): useLoginBoxReturn {
     const selectedStyle = 'inline-block w-2/5 m-1 border-2 rounded-full text-white'
 
     const [certificate, setType] = React.useState<boolean>(true);

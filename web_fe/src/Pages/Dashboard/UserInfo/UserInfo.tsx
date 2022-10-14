@@ -1,10 +1,10 @@
 import * as React from 'react'
 import './UserInfoStyle.css'
-import profile_tmp from '../../images/profile-tmp.png'
+import profile_tmp from '../../../images/profile-tmp.png'
 
 const Userinfo: React.FC = () => {
     return (
-        <div id='UserInfoContainer' className='w-full h-full border-inherit bg-gray-100'>
+        <div id='UserInfoContainer' className='h-full bg-orange-400'>
             <div id='UserContent' className='flex justify-around mx-auto h-5/6 bg-white'>
 
                 <div id='UserInfos' className='flex justify-around bg-pink-200 w-3/5'>

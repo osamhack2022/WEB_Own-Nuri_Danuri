@@ -1,0 +1,14 @@
+#MostBenefitSlide {
+    width: 500%;
+    /* animation: slideleft 3s linear infinite; */
+}
+
+@keyframes slideleft {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translateX(-1066.660px);
+    }
+}
