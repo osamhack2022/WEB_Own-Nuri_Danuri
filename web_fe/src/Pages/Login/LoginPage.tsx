@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../Main/Logo/Logo';
+import Logo from '../../Components/Logo/Logo';
 import './LoginPageStyle.css'
 
 import SignBox from './SignBox/SignBox';

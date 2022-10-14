@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './UserInfoStyle.css'
-import profile_tmp from '../../images/profile-tmp.png'
+import profile_tmp from '../../../images/profile-tmp.png'
 
 const Userinfo: React.FC = () => {
     return (

@@ -2,15 +2,15 @@ import * as React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Page Import
-import MainPage from './Main/MainPage';
-import LoginPage from './Login/LoginPage';
-import DashboardPage from './Dashboard/DashboardPage';
-import NotFoundPage from './NotFound/NotFoundPage';
+import MainPage from './Pages/Main/MainPage';
+import LoginPage from './Pages/Login/LoginPage';
+import DashboardPage from './Pages/Dashboard/DashboardPage';
+import NotFoundPage from './Pages/NotFound/NotFoundPage';
 
 // Component Import
-import Userinfo from './Dashboard/UserInfo/UserInfo';
-import MostBenfits from './Dashboard/MostBenefit/MostBenefits';
-import BenefitList from './Dashboard/BenefitList/BenefitList';
+import Userinfo from './Pages/Dashboard/UserInfo/UserInfo';
+import MostBenfits from './Pages/Dashboard/MostBenefit/MostBenefits';
+import BenefitList from './Pages/Dashboard/BenefitList/BenefitList';
 
 function App() {
   return (

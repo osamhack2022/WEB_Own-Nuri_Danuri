@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './Logo/Logo';
+import Logo from '../../Components/Logo/Logo';
 import './MainPageStyle.css';
 
 import PageIntro from './PageIntro/PageIntro';

@@ -10,12 +10,12 @@ const SignBox: React.FC<props> = ({ certificate }) => {
         return (
             <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
 
-                <input id='CertMilID' placeholder='군번' type='text' className='block mx-auto my-5'/>
+                <input id='CertMilID' placeholder='군번' type='text' className='block mx-auto my-5 border-b-2 w-2/5'/>
 
-                <input id='CertPw' placeholder='비밀번호' type="password" className='block mx-auto my-5'/>
+                <input id='CertPw' placeholder='비밀번호' type="password" className='block mx-auto my-5 border-b-2 w-2/5'/>
 
-                <label htmlFor='CertArmyUnit' className='block'>부대 : </label>
-                <select id='CertArmyUnit'>
+                <label htmlFor='CertArmyUnit' className=''>부대 : </label>
+                <select id='CertArmyUnit' className='inline-block'>
                     <option>1군단 101정보통신단 운용대대</option>
                     <option>1군단 본부근무대</option>
                 </select>
