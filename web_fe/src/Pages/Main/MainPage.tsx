@@ -23,7 +23,7 @@ const Main_page: React.FC = () => {
 
                     <div id='MainNav' className='flex justify-between mr-8 w-40'>
                         <button className='text-white pt-1'>소개</button>
-                        <button onClick={togglePop} className='text-white px-4 pt-2 hover:pb-1 hover:rounded-full hover:bg-white hover:text-cyan-400'>시작하기</button>
+                        <button onClick={togglePop} className='text-white px-4 pt-2 pb-1 rounded-full hover:bg-white hover:text-cyan-400'>시작하기</button>
                     </div>
 
                 </div>
