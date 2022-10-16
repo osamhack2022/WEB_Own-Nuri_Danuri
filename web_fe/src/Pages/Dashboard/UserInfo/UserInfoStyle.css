@@ -1,0 +1,8 @@
+#UserInfos input, select {
+    border: 1px solid gray;
+}
+
+#modifybutton {
+    top: 0.7em;
+    left: 0.7em;
+}

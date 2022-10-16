@@ -1,12 +1,12 @@
 #ModalContainer {
     background-color: rgba(0,0,0,0.6);
     backdrop-filter: blur(4px);
-    /* animation: fadein 0.5s 1 linear; */
+    animation: fadein 0.5s 1 linear;
 }
 
 #ModalContent {
     transform: translate(-50%, -50%);
-    /* animation: popup 0.5s 1 linear; */
+    animation: popup 0.5s 1 linear;
 }
 
 @keyframes fadein {

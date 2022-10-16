@@ -1,9 +1,21 @@
-#BenefitCardText {
-    width: 35%;
+#card1 {
+   background-color: red; 
 }
-
-#BenefitCardImage {
-    width: 65%;
-    background-image: url('../../../../images/event_example.png');
-    background-size: cover;
+#card2 {
+    background-color: orange;
+}
+#card3 {
+    background-color: yellow;
+}
+#card4 {
+    background-color: green;
+}
+#card5 {
+    background-color: blue;
+}
+#card6 {
+    background-color: navy;
+}
+#card7 {
+    background-color: purple;
 }

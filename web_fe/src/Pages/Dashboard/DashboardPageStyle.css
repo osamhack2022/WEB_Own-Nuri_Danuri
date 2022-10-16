@@ -7,11 +7,38 @@
     background: linear-gradient(to right, rgba(21, 65, 129, 0.7) -0.29%, rgba(70, 143, 255, 0.7) 100%);
 }
 
+#DashContent {
+    border-radius: 30px 100px 30px 100px;
+    width: 70%;
+    height: 70%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #DashSidebar {
-    height: 8%;
+    width: 15%;
+    z-index: 1;
+    transition: all 0.5s 0s linear;
+}
+
+#DashSidebar.slideOut {
+    transform: translateX(0);
+}
+#DashSidebar.slideIn {
+    transform: translateX(50px);
 }
 
 #DashMainboard {
-    height: 92%;
-    border-radius: 0 100px 30px 100px;
+    width: 85%;
+    z-index: 2;
+    transition: all 0.5s 0s linear;
+}
+
+#DashMainboard.slideOut {
+    transform: translateX(0);
+}
+#DashMainboard.slideIn {
+    transform: translateX(-50px);
 }
