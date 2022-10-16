@@ -6,9 +6,10 @@ import Modal from '../../Components/Modal/Modal';
 
 import useModal from '../../Components/Modal/useModal';
 import LoginBox from './Login/LoginBox';
+import { getAllJSDocTagsOfKind } from 'typescript';
 
 const Main_page: React.FC = () => {
-    const {isPoped, togglePop} = useModal();
+    const { isPoped, togglePop } = useModal();
 
     return (
         <div id='MainContainer' className='w-full'>
@@ -18,10 +19,11 @@ const Main_page: React.FC = () => {
 
                 <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <Logo />
+                    <div className='m-4 w-12 h-12 text-2xl'><Logo /></div>
 
-                    <div id='MainNav' className='flex justify-around mr-4 w-80 text-white'>
-                        <button onClick={togglePop} className='animate-pulse inline-block text-white'>시작하기</button>
+                    <div id='MainNav' className='flex justify-between mr-8 w-40'>
+                        <button className='text-white pt-1'>소개</button>
+                        <button onClick={togglePop} className='text-white px-4 pt-2 hover:pb-1 hover:rounded-full hover:bg-white hover:text-cyan-400'>시작하기</button>
                     </div>
 
                 </div>
