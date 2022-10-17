@@ -18,7 +18,7 @@ const DashboardPage: React.FC = () => {
                     <Sidebar />
                 </div>
 
-                <div id='DashMainboard' className={`${isShowed ? 'slideOut' : 'slideIn'}`}>
+                <div id='DashMainboard' className={`${isShowed ? 'asdfslideOut' : 'asdfslideIn'}`}>
                     <Outlet />
                 </div>
 
