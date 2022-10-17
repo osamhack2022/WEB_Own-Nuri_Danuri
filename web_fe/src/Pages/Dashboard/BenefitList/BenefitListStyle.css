@@ -1,0 +1,15 @@
+#BenefitListMenu > button:hover {
+    color: aqua;
+    border-color: aqua;
+}
+
+#ListBoard {
+    height: 75%;
+}
+
+#PostsTitle {
+    height: 10%;
+}
+#Posts {
+    height: 90%;
+}
