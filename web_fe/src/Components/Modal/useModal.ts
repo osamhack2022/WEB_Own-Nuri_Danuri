@@ -6,7 +6,7 @@ interface useModalReturn {
 }
 
 function useModal() : useModalReturn {
-    const [isPoped, setPop] = React.useState(false);
+    const [isPoped, setPop] = React.useState(true);
 
     function togglePop() {
         setPop((prev)=>!prev);

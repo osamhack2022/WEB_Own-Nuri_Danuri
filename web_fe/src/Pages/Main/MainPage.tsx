@@ -23,7 +23,7 @@ const Main_page: React.FC = () => {
 
                     <div className='m-4 w-12 h-12 text-xl'><Logo /></div>
 
-                    <div id='MainNav' className='flex justify-between mr-12 w-32'>
+                    <div id='MainNav' className='flex justify-between mr-8 w-32'>
                         <button className='text-white pt-1'>소개</button>
                         <button onClick={togglePop} className='text-white px-2 pt-1 rounded-full border-2 border-white border-box
                          hover:border-gray-300 hover:text-gray-300'>시작하기</button>
@@ -63,8 +63,8 @@ const Main_page: React.FC = () => {
 
             </div>
 
-            <Modal isPoped={isPoped} togglePop={togglePop}>
-                <LoginBox />
+            <Modal isPoped={isPoped}>
+                <LoginBox togglePop={togglePop}/>
             </Modal>
 
         </div>
