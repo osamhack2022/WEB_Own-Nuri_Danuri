@@ -9,10 +9,11 @@ interface props {
 
 const BenefitCardSet : React.FC<props> = ({id1, id2, id3}) => {
     return (
-        <div id='CardSet' className='flex'>
-            <BenefitCard cardID={id1} />
+        <div id='CardSet' className='flex w-1/3 h-full justify-around items-center'>
+
+            <div className='block ml-4'><BenefitCard cardID={id1} /></div>
             <BenefitCard cardID={id2} />
-            <BenefitCard cardID={id3} />
+            <div className='block ml-4'><BenefitCard cardID={id3} /></div>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import BenefitList from './Pages/Dashboard/BenefitList/BenefitList';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
+import Hosting from './Pages/Dashboard/Hosting/Hosting';
 import MostBenfits from './Pages/Dashboard/MostBenefit/MostBenefits';
 import Userinfo from './Pages/Dashboard/UserInfo/UserInfo';
 import MainPage from './Pages/Main/MainPage';
@@ -20,6 +21,7 @@ function App() {
             <Route path="userinfo" element={<Userinfo />} />
             <Route path="mostbenefits" element={<MostBenfits />} />
             <Route path="benefitlist" element={<BenefitList />} />
+            <Route path="hosting" element={<Hosting />} />
           </Route>
 
           <Route path="/*" element={<NotFoundPage />} />

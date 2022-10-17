@@ -2,25 +2,28 @@ import * as React from 'react'
 import BenefitCard from './BenefitCard/BenefitCard';
 import './MostBenefitsStyle.css';
 
-import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi'
+import { HiOutlineChevronLeft, } from 'react-icons/hi'
+import { HiOutlineChevronRight } from 'react-icons/hi2';
 import BenefitCardSet from './BenefitCard/BenefitCardSet';
+import useMostBenefit from './useMostBenefit';
+
 
 const MostBenfits: React.FC = () => {
+    const {slideNum, slideRight, slideLeft} = useMostBenefit();
+
     return (
-        <div id='MostBenefitContainer' className='h-full bg-green-300'>
-            
-            <div id='MostBenefitSlide' className='h-1/3 flex bg-green-500'>
+        <div id='MostBenefitContainer' className='overflow-hidden relative h-full bg-white'>
+
+            <div id={`Slide${slideNum}`} className='MostBenefitSlide absolute h-1/3 flex bg-gray-100'>
                 <BenefitCardSet id1={1} id2={2} id3={3} />
                 <BenefitCardSet id1={4} id2={5} id3={6} />
                 <BenefitCardSet id1={7} />
             </div>
 
-            <div id='MostBenefitController' className='fixed bg-red-500 bottom-1 right-1'>
-                
-                <button><HiOutlineChevronLeft className='text-white/></button>
-                <span>1/5</span>
-                <button> <HiOutlineChevronRight className='text-white /></button>
-
+            <div id='MostBenefitController' className='absolute inline-block bg-red-500 bottom-8 right-8'>
+                <button onClick={slideLeft}><HiOutlineChevronLeft className='white'/></button>
+                <span>{slideNum}/3</span>
+                <button onClick={slideRight}><HiOutlineChevronRight className='white'/></button>
             </div>
         </div>
     )

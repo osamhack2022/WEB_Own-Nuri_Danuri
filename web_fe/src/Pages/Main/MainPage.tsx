@@ -1,12 +1,14 @@
 import * as React from 'react';
 import './MainPageStyle.css';
+
 import Logo from '../../Components/Logo/Logo';
 import PageIntro from './PageIntro/PageIntro';
 import Modal from '../../Components/Modal/Modal';
-
 import useModal from '../../Components/Modal/useModal';
 import LoginBox from './Login/LoginBox';
-import { getAllJSDocTagsOfKind } from 'typescript';
+
+import {HiArrowDown} from 'react-icons/hi'
+
 
 const Main_page: React.FC = () => {
     const { isPoped, togglePop } = useModal();
@@ -19,11 +21,12 @@ const Main_page: React.FC = () => {
 
                 <div id='MainHeader' className='flex justify-between items-center'>
 
-                    <div className='m-4 w-12 h-12 text-2xl'><Logo /></div>
+                    <div className='m-4 w-12 h-12 text-xl'><Logo /></div>
 
-                    <div id='MainNav' className='flex justify-between mr-8 w-40'>
+                    <div id='MainNav' className='flex justify-between mr-12 w-32'>
                         <button className='text-white pt-1'>소개</button>
-                        <button onClick={togglePop} className='text-white px-4 pt-1 rounded-full border-2 border-white border-box hover:bg-white hover:text-cyan-400'>시작하기</button>
+                        <button onClick={togglePop} className='text-white px-2 pt-1 rounded-full border-2 border-white border-box
+                         hover:border-gray-300 hover:text-gray-300'>시작하기</button>
                     </div>
 
                 </div>
@@ -42,13 +45,9 @@ const Main_page: React.FC = () => {
                     <div id='MainWave2' className='MainWave inline-block absolute opacity-60' />
                     <div id='MainWave3' className='MainWave inline-block absolute opacity-40' />
 
-                    <div className='motion-reduce:animate-bounce absolute bottom-1/4 mx-auto bg-red-500'>
-                        <span className='inline-block bg-red-900'>
-                            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
-                                <path strokeLinecap='round' strokeLinejoin='round' d='M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3' />
-                            </svg>
-                        </span>
-                        <span className='inlin-block bg-red-100'>더 알아보기</span>
+                    <div id='MainMoreInfo' className='absolute bottom-1/4 left-1/2 px-2 w-fit flex items-center text-white rounded-full'>
+                        <HiArrowDown className='w-4 h-4'/>
+                        <span className='pt-1 pl-2 text-base'>온누리?</span>
                     </div>
                 </div>
 
@@ -58,8 +57,8 @@ const Main_page: React.FC = () => {
             <div id='MainSection2'>
 
                 <div id='MainIntro'>
-                    {/* <PageIntro imgsrc='img1' explanation='explain1' />
-                    <PageIntro imgsrc='img2' explanation='explain2' /> */}
+                    <PageIntro imgsrc='img1' explanation='explain1' />
+                    <PageIntro imgsrc='img2' explanation='explain2' />
                 </div>
 
             </div>
