@@ -20,7 +20,6 @@
 // //react 에서 페이지 연결 다 됐으면 리액트에서 routing 하는법.
 //js
 
-//
 
 import express from 'express';
 
@@ -47,14 +46,8 @@ app.get('/', function(request, response){
 // app.get('/aa', function(request, response){
 //     // response.json({});
 // })
-
-
-
-// 이걸로 보내주는거임 내가 필요한 데이터를 react 페이지에.
-// ajax 써서 받는거래 react 쪽에서는
 // 주소는 https://osamhack2022-v2-web-own-nuri-danuri-jqx4j4wp7wr3j75j-3000.githubpreview.dev/
 
-//여기로 하셈 ㅇㅋㅇㅋ
 
 app.get('*', function(request, response){
     response.sendFile(path.join(__dirname, '../../web_fe/build/index.html'));
