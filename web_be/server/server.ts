@@ -24,12 +24,71 @@
 import express from 'express';
 
 const app = express();
-const test = require("./router/test");
+//const test = require("./router/test");
 const path = require('path')
-
+const db = require('./config/db');
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
+
+// app.get('/api/products', (req, res) => {
+//     db.query("SELECT * FROM mall_test", (err, data) => {
+//         if(!err) res.send({ products : data });
+//         else res.send(err);
+//     })
+// })
+
+// app.listen(3000, () => {
+//     console.log(`Server On : http://localhost:${PORT}/`);
+// })
+
+
+
+
+
+
+
+//////////////
+
+//react 파트 . 
+//app.ts
+// import React, { Component } from 'react';
+// import axios from 'axios';
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       hello : [],
+//     }
+//   }
+
+//   componentDidMount() {
+//     this._getHello();
+//   }
+
+//   _getHello = async() => {
+//     const res = await axios.get('/hello');
+//     this.setState({ hello : res.data.hello })
+//     console.log(this.state.hello);
+//   }
+
+//   render() {
+//     return(
+//       <>
+//         <h3>get DB data(브라우저 개발모드 콘솔확인)</h3>
+//       </>
+//     )
+//   }
+// }
+// export default App;
+
+//////////////
+
+
+
+
+/////////
 // app.use("/api", test);
 
 app.use(express.json());
@@ -55,3 +114,4 @@ app.get('*', function(request, response){
 
 // const port: number = 5000;
 // app.listen(port, () => console.log(`${port}`)); //`${port}`
+
