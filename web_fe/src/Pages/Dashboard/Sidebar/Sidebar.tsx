@@ -8,10 +8,12 @@ import Profile from '../../../Components/Profile/Profile';
 
 interface Props {
     isShowed: boolean
+    boardState : BoardState;
     toggleState: (state: BoardState) => void;
+    getThemeColor: () => string;
 }
 
-const Sidebar: React.FC<Props> = ({ isShowed, toggleState }) => {
+const Sidebar: React.FC<Props> = ({ isShowed, boardState, toggleState, getThemeColor }) => {
     return (
         <div id="SidebarContainer" className='h-full'>
             <div className='flex flex-col mt-8 h-fit justify-between items-center text-white'>
