@@ -29,13 +29,35 @@ const test = require("./router/test");
 const path = require('path')
 
 
-app.listen(5050, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
 // app.use("/api", test);
+
+app.use(express.json());
+var cors = require('cors');
+app.use(cors());
+
 app.use(express.static(path.join(__dirname, '../../web_fe/build')));
 
 app.get('/', function(request, response){
-    response.sendFile(path.join(__dirname, '../web_fe/build/index.html'));
+    response.sendFile(path.join(__dirname, '../../web_fe/build/index.html'));
+})
+
+
+// app.get('/aa', function(request, response){
+//     // response.json({});
+// })
+
+
+
+// 이걸로 보내주는거임 내가 필요한 데이터를 react 페이지에.
+// ajax 써서 받는거래 react 쪽에서는
+// 주소는 https://osamhack2022-v2-web-own-nuri-danuri-jqx4j4wp7wr3j75j-3000.githubpreview.dev/
+
+//여기로 하셈 ㅇㅋㅇㅋ
+
+app.get('*', function(request, response){
+    response.sendFile(path.join(__dirname, '../../web_fe/build/index.html'));
 })
 
 // const port: number = 5000;
