@@ -1,8 +1,17 @@
 import * as React from 'react';
 
+export enum BoardType {
+    UserInfo,
+    MostBenefits,
+    BenefitList,
+    Hosting
+}
+
 interface useSidebarReturn {
     isShowed: boolean;
     toggleShowed: () => void;
+
+    
 }
 
 function useSidebar(): useSidebarReturn {
