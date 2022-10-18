@@ -29,7 +29,7 @@ const test = require("./router/test");
 const path = require('path')
 
 
-app.listen(5000, () => console.log('Example app listening on port 3000!'))
+app.listen(5050, () => console.log('Example app listening on port 3000!'))
 
 // app.use("/api", test);
 app.use(express.static(path.join(__dirname, '../../web_fe/build')));

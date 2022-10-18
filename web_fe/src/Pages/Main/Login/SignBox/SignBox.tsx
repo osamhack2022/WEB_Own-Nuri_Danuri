@@ -6,6 +6,8 @@ interface props {
 }
 
 const SignBox: React.FC<props> = ({ certificate }) => {
+
+    //사용신청
     if (certificate) {
         return (
             <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
@@ -20,6 +22,8 @@ const SignBox: React.FC<props> = ({ certificate }) => {
             </div>
         )
     }
+
+    //로그인
     else {
         return (
             <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
