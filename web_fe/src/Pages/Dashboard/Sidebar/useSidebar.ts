@@ -7,7 +7,7 @@ export enum BoardState {
     Hosting
 }
 
-const ThemeColor: String[] = ['#B8E8FC', '#9ED2C6', '#6E85B7', '#B1B2FF'];
+const ThemeColor: string[] = ['amber-400', 'emerald-400', 'violet-400', 'rose-400'];
 
 interface useSidebarReturn {
     isShowed: boolean;
@@ -15,7 +15,7 @@ interface useSidebarReturn {
 
     boardState: BoardState;
     toggleState: (state: BoardState) => void;
-    getThemeColor: () => string;
+    themeColor: string;
 }
 
 function useSidebar(): useSidebarReturn {
@@ -24,9 +24,13 @@ function useSidebar(): useSidebarReturn {
 
     const [boardState, setState] = React.useState(BoardState.MostBenefits);
     function toggleState(state: BoardState) { setState(state); }
-    function getThemeColor() { return String(ThemeColor[boardState]); }
+    
+    const [themeColor, setThemeColor] = React.useState(ThemeColor[boardState]);
+    React.useEffect(()=>{
+        setThemeColor(ThemeColor[boardState]);
+    }, [boardState])
 
-    return { isShowed, toggleShowed, boardState, toggleState, getThemeColor };
+    return { isShowed, toggleShowed, boardState, toggleState, themeColor };
 }
 
 export default useSidebar;

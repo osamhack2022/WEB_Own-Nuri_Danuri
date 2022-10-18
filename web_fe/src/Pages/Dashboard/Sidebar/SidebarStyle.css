@@ -2,6 +2,6 @@
     background-color: #1d1d27;
 }
 
-#SlideProfile.slideIn {
-    transform: translateX(-43.5px);
+.active p{
+    max-width: 100px;
 }

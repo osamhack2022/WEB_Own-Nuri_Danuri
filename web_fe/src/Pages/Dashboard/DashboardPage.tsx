@@ -6,19 +6,15 @@ import useSidebar from './Sidebar/useSidebar';
 import { HiMenu } from 'react-icons/hi'
 
 const DashboardPage: React.FC = () => {
-    const { isShowed, toggleShowed, boardState, toggleState, getThemeColor } = useSidebar();
-    const themeColor : string = getThemeColor();
+    const { isShowed, toggleShowed, boardState, toggleState, themeColor } = useSidebar();
 
     return (
-        <div id='DashContainer' className='ease-linear duration-500 overflow-hidden relative' style={
-            { backgroundColor : themeColor }
-        }>
-
+        <div id='DashContainer' className={`bg-${themeColor} ease-linear duration-500 overflow-hidden relative`}>
             <div id='DashContent' className='overflow-hidden flex absolute'>
                 
                 <div id="DashSidebar" className={`${isShowed ? 'slideOut' : 'slideIn'}`}>
                     <button onClick={toggleShowed} className='block m-4'><HiMenu className='text-white'/></button>
-                    <Sidebar isShowed={isShowed} boardState={boardState} toggleState={toggleState} getThemeColor={getThemeColor}/>
+                    <Sidebar isShowed={isShowed} boardState={boardState} toggleState={toggleState} themeColor={themeColor}/>
                 </div>
 
                 <div id='DashMainboard' className={`${isShowed ? 'slideOut' : 'slideIn'}`}>
