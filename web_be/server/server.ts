@@ -20,12 +20,23 @@
 // //react 에서 페이지 연결 다 됐으면 리액트에서 routing 하는법.
 //js
 
+//
+
 import express from 'express';
 
 const app = express();
 const test = require("./router/test");
+const path = require('path')
 
-app.use("/api", test);
 
-const port: number = 5000;
-app.listen(port, () => console.log(`${port}`)); //`${port}`
+app.listen(5000, () => console.log('Example app listening on port 3000!'))
+
+// app.use("/api", test);
+app.use(express.static(path.join(__dirname, '../../web_fe/build')));
+
+app.get('/', function(request, response){
+    response.sendFile(path.join(__dirname, '../web_fe/build/index.html'));
+})
+
+// const port: number = 5000;
+// app.listen(port, () => console.log(`${port}`)); //`${port}`
