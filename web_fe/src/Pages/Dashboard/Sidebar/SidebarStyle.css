@@ -1,7 +1,49 @@
 #SidebarContainer {
     background-color: #1d1d27;
 }
+.active.userinfobg { background-color: rgba(184,232,252,1); }
+.active.mostbenefitbg { background-color: rgba(158, 210, 198, 1); }
+.active.benefitlistbg { background-color: rgba(110, 133, 183, 1); }
+.active.hostingbg { background-color: rgba(177, 178, 255, 1); }
 
-#SlideProfile.slideIn {
-    transform: translateX(-43.5px);
+
+.SlidebarButton {
+    display : flex;
+    align-items: center;
+
+    margin-bottom: 1em;
+    border-radius: 9999px;
+    padding: 0.3em;
+    
+    color: white;
 }
+.SlidebarButton > p {
+    overflow: hidden;
+    max-width: 0;
+    font-size: 0.8em;
+}
+.SlidebarButton.active > p {
+    margin-left: 0.5em;
+    padding-top: 0.2em;
+    max-width: 200px;
+    transition: max-width 1s linear;
+}
+
+/*
+    버튼과 글자를 https://codepen.io/FlorinPop17/pen/ZZajGB 처럼 하려했는데 색이 구려서 실패
+    재시도시 SCSS이용해서 유지력 높은 코드 해보고 싶음
+
+    추가로, sidebar NavLink의 p에 한글 / 띄어쓰기 넣으면 똑바로 작동안하는데 원인 분석
+*/
+/* .SlidebarButton.active > .userinfobg {
+    color: rgba(184,232,252,1);
+}
+.SlidebarButton.active > .mostbenefitbg {
+    color: rgba(158, 210, 198, 1);
+}
+.SlidebarButton.active > .benefitlistbg {
+    color: rgba(110, 133, 183, 1);
+}
+.SlidebarButton.active > .hostingbg {
+    color: rgba(177, 178, 255, 1);
+} */

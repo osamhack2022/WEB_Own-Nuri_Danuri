@@ -8,31 +8,48 @@ import Profile from '../../../Components/Profile/Profile';
 
 interface Props {
     isShowed: boolean
-    boardState : BoardState;
+    boardState: BoardState;
     toggleState: (state: BoardState) => void;
-    getThemeColor: () => string;
+    bgColor: string;
 }
 
-const Sidebar: React.FC<Props> = ({ isShowed, boardState, toggleState, getThemeColor }) => {
+const Sidebar: React.FC<Props> = ({ isShowed, boardState, toggleState, bgColor }) => {
     return (
         <div id="SidebarContainer" className='h-full'>
-            <div className='flex flex-col mt-8 h-fit justify-between items-center text-white'>
-                <div id="SideProfile" className='mb-8 w-24 text-sm'>
-                    {isShowed ? <Profile /> : null}
-                </div>
+            {
+                isShowed ? (
+                    <div className='flex flex-col mt-8 h-fit justify-between items-center text-white'>
 
-                <NavLink onClick={()=>toggleState(BoardState.UserInfo)}
-                    className='p-1 mb-4 border-2 border-white rounded-full' to='/dashboard/userinfo'><HiOutlineUser className='text-white' /></NavLink>
-                
-                <NavLink onClick={()=>toggleState(BoardState.MostBenefits)}
-                    className='p-1 mb-4 border-2 border-white rounded-full' to='/dashboard/mostbenefits'><HiOutlineGift className='text-white' /></NavLink>
-                
-                <NavLink onClick={()=>toggleState(BoardState.BenefitList)}
-                    className='p-1 mb-4 border-2 border-white rounded-full' to='/dashboard/benefitlist'><HiOutlineClipboard className='text-white' /></NavLink>
-                
-                <NavLink onClick={()=>toggleState(BoardState.Hosting)}
-                className='p-1 mb-4 border-2 border-white rounded-full' to='/dashboard/hosting'><HiOutlineSpeakerphone className='text-white' /></NavLink>
-            </div>
+                        <div id="SideProfile" className='mb-6 w-24 text-sm'>
+                            <Profile />
+                        </div>
+
+                        <NavLink onClick={() => toggleState(BoardState.UserInfo)} to='/dashboard/userinfo'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineUser className={bgColor} />
+                            <p className={bgColor}>UserInfo</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.MostBenefits)} to='/dashboard/mostbenefits'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineGift className={bgColor} />
+                            <p className={bgColor}>MyPick</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.BenefitList)} to='/dashboard/benefitlist'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineClipboard className={bgColor} />
+                            <p className={bgColor}>BenefitsList</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.Hosting)} to='/dashboard/hosting'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineSpeakerphone className={bgColor} />
+                            <p className={bgColor}>Hosting</p>
+                        </NavLink>
+
+                    </div>) : null
+            }
         </div>
     );
 };
