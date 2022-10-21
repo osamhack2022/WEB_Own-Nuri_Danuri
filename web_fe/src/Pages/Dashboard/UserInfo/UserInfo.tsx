@@ -3,7 +3,7 @@ import './UserInfoStyle.css'
 import profile_tmp from '../../../images/profile-tmp.png'
 import { HiOutlinePencilSquare } from 'react-icons/hi2';
 
-import useUserInfo, { User } from '../../../API_Hooks/useUserInfo';
+import useUserInfo, { User } from '../../../Hooks/useUserInfo';
 
 const Userinfo: React.FC = () => {
     const { userSet } = useUserInfo('/UserInfo');
