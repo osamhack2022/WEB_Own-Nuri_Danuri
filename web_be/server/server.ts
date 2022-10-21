@@ -31,8 +31,13 @@ const db = require('./config/db');
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
 
+db.query('SELECT 1', function (error, results, fields) {
+    if (error) throw error;
+    // connected!
+  });
+
 // app.get('/api/products', (req, res) => {
-//     db.query("SELECT * FROM mall_test", (err, data) => {
+//     db.query("SELECT 1", (err, data) => {
 //         if(!err) res.send({ products : data });
 //         else res.send(err);
 //     })
