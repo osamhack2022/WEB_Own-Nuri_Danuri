@@ -1,31 +1,36 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import useUserInfo from '../../../../Hooks/useUserInfo';
-import useInput from '../../../../Hooks/useInput';
+import { useForm } from 'react-hook-form';
 
 interface props {
     certificate: boolean
 }
 
 const SignBox: React.FC<props> = ({ certificate }) => {
-    const { onSubmitHandler } = useUserInfo('/UserInfo');
-    // const { inputs, onChange } = useInput();
+
+    // react hook form 사용
+    const { register, handleSubmit } = useForm();
+
+    const onValid = (data: any) => {
+        console.log("Valid!");
+        console.log(data);
+    };
 
     // 사용신청
     if (certificate) {
-        // const { CertMilID, CertPw, CertArmyUnit } = inputs;
 
         return (
             <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
+                <form onSubmit={handleSubmit(onValid)}>
 
-                <form onSubmit={onSubmitHandler}>
-                    <input id='CertMilID' placeholder='군번' type='text' value={} onChange={onChange} className='inline-block my-4 border-b-2 w-3/5' />
-                    <input id='CertPw' placeholder='비밀번호' type="password" onChange={onChange} className='inline-block my-4 border-b-2 w-3/5' />
-                    <input id='CertArmyUnit' placeholder='부대' type="text" onChange={onChange} className='inline-block mx-2 my-4 border-b-2 w-3/5' />
+                    <input {...register('CertMilID')} placeholder='군번' type='text' className='inline-block my-4 border-b-2 w-3/5' />
+                    <input {...register('CertPW')} placeholder='비밀번호' type='password' className='inline-block my-4 border-b-2 w-3/5' />
+                    <input {...register('CertArmyUnit')} placeholder='부대' type='text' className='inline-block my-4 border-b-2 w-3/5' />
+
                     <input type='submit' value='인증하기' className='block mx-auto my-4 w-1/5 border-2 rounded-full pt-1 border-blue-500 text-blue-500' />
-                </form>
 
+                </form>
             </div>
         )
     }
@@ -34,11 +39,14 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     else {
         return (
             <div id="SignBox_container" className='w-full overflow-hidden rounded-md text-center bg-white'>
+                <form>
 
-                <input id='LogtMilID' placeholder='군번' type='text' className='inline-block my-4 border-b-2 w-3/5' />
-                <input id='LogPw' placeholder='비밀번호' type="password" className='inline-block mx-2 my-4 border-b-2 w-3/5' />
+                    <input {...register('LoginMilID')} placeholder='군번' type='text' className='inline-block my-4 border-b-2 w-3/5' />
+                    <input {...register('LoginPW')} placeholder='비밀번호' type='password' className='inline-block my-4 border-b-2 w-3/5' />
 
-                <Link to="/dashboard/mostbenefits"><button className='block mx-auto my-4 w-1/5 border-2 rounded-full pt-1 border-blue-500 text-blue-500'>로그인</button></Link>
+                    <Link to="/dashboard/mostbenefits"><button className='block mx-auto my-4 w-1/5 border-2 rounded-full pt-1 border-blue-500 text-blue-500'>로그인</button></Link>
+
+                </form>
             </div>
         )
     }

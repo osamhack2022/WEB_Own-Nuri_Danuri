@@ -1,6 +1,11 @@
-#BenefitListMenu > button:hover {
-    color: aqua;
-    border-color: aqua;
+#BenefitListMenu > button {
+    padding : 1em 0 0.5em;
+    width: 8em;
+    border-bottom: 2px solid black;
+}
+#BenefitListMenu > button.active {
+    color: rgba(110, 133, 183, 1);
+    border-color: rgba(110, 133, 183, 1);
 }
 
 #ListBoard {
