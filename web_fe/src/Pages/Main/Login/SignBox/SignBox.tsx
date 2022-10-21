@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 interface props {
     certificate: boolean
@@ -15,6 +16,8 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     const onValid = (data: any) => {
         console.log("Valid!");
         console.log(data);
+
+        axios.post('/UserInfo', data);
     };
 
     // 사용신청
