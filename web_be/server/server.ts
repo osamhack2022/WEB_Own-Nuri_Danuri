@@ -28,13 +28,13 @@ const app = express();
 const path = require('path')
 const db = require('./config/db');
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen('192.168.1.26:80', () => console.log('Example app listening on port 3000!'))
 
 
-db.query('SELECT 1', function (error, results, fields) {
-    if (error) throw error;
-    // connected!
-  });
+// db.query('SELECT 1', function (error, results, fields) {
+//     if (error) throw error;
+//     // connected!
+//   });
 
 // app.get('/api/products', (req, res) => {
 //     db.query("SELECT 1", (err, data) => {
