@@ -1,8 +1,9 @@
 import * as React from 'react'
+import Editor from '../../../Components/Editor/Editor';
 
 const Hosting : React.FC = () => {
     return (
-        <h1>Showing Hosting 😍</h1>
+        <Editor/>
     )
 }
 
