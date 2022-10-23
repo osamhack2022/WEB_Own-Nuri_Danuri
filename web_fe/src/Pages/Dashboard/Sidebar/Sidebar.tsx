@@ -27,25 +27,25 @@ const Sidebar: React.FC<Props> = ({ isShowed, boardState, toggleState, bgColor }
                         <NavLink onClick={() => toggleState(BoardState.UserInfo)} to='/dashboard/userinfo'
                             className={'SlidebarButton ' + bgColor}>
                             <HiOutlineUser className={bgColor} />
-                            <p className={bgColor}>UserInfo</p>
+                            <p className={bgColor}>내 정보</p>
                         </NavLink>
 
                         <NavLink onClick={() => toggleState(BoardState.MostBenefits)} to='/dashboard/mostbenefits'
                             className={'SlidebarButton ' + bgColor}>
                             <HiOutlineGift className={bgColor} />
-                            <p className={bgColor}>MyPick</p>
+                            <p className={bgColor}>내 지갑</p>
                         </NavLink>
 
                         <NavLink onClick={() => toggleState(BoardState.BenefitList)} to='/dashboard/benefitlist'
                             className={'SlidebarButton ' + bgColor}>
                             <HiOutlineClipboard className={bgColor} />
-                            <p className={bgColor}>BenefitsList</p>
+                            <p className={bgColor}>게시판</p>
                         </NavLink>
 
                         <NavLink onClick={() => toggleState(BoardState.Hosting)} to='/dashboard/hosting'
                             className={'SlidebarButton ' + bgColor}>
                             <HiOutlineSpeakerphone className={bgColor} />
-                            <p className={bgColor}>Hosting</p>
+                            <p className={bgColor}>주최하기</p>
                         </NavLink>
 
                     </div>) : null

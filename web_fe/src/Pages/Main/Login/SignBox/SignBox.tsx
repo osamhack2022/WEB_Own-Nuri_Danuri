@@ -26,7 +26,7 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     if (certificate) {
 
         return (
-            <div id="SignBoxContainer" className='w-full bg-white'>
+            <div id="SignBoxContainer" className='w-full'>
                 <form onSubmit={handleSubmit(onValid)} className='w-full'>
 
                     <input {...register('id')} placeholder='군번' type='text' className='SignBoxInput' />
@@ -43,7 +43,7 @@ const SignBox: React.FC<props> = ({ certificate }) => {
     // 로그인
     else {
         return (
-            <div id="SignBoxContainer" className='w-full bg-white'>
+            <div id="SignBoxContainer" className='w-full'>
                 <form className='w-full'>
 
                     <input {...register('id')} placeholder='군번' type='text' className='SignBoxInput' />

@@ -1,36 +1,40 @@
 #SignBoxContainer {
     display: flex;
     justify-content: space-around;
-    /* flex-direction: column; */
 
+    padding: 2em 0;
     width: 100%;
     height: 60%;
+
+    background-color: white;
 }
 
 .SignBoxInput {
     display: block;
     margin: 1em auto;
     border: 1px solid #ddd;
+    border-radius: 0.5em;
     padding: 0.8em 0;
     width: 90%;
 
     color: black;
     text-indent: 1em;
+    box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 input::-webkit-input-placeholder {
     /* placeholder 글자색 변경(크롬 적용) */
-    color: #ccc;
+    color: #bbb;
 }
 
 #SignBoxSubmit {
     display: inline-block;
     margin-top: 1.5em;
-    /* border: 1px solid #ddd; */
     border-radius: 1em;
-    padding: 0.8em 0;
+    padding: 0.8em 0 0.6em;
     width: 60%;
 
-    background-color: aquamarine;
+    background-color: #5498ff;
     color: white;
+    box-shadow: 1px 1px 1px 1px #205bb7;
 }

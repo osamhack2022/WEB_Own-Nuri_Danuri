@@ -1,6 +1,4 @@
-/* #LoginContainer {
-    background-color: #4188f3;
-} */
+
 
 #LoginToggleBox {
     transform: translateY(1px);
@@ -8,12 +6,16 @@
 
 #LoginToggleBox>.active {
     box-sizing: border-box;
-    /* border-radius: 3em 3em 0 0; */
+    border-radius: 3em 3em 0 0;
     background-color: white;
+    color: #5498ff;
 }
 
 #LoginToggleBox>.unactive {
     box-sizing: border-box;
-    /* border-radius: 5em 5em 0 0;  */
-    background-color: #4188f3;
+    border-radius: 3em 3em 0 0; 
+    
+    background-color: #5498ff;
+    color: white;
+    box-shadow: inset 0px -2px 5px 0px #205bb7;
 }

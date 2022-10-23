@@ -19,6 +19,7 @@
 }
 .SlidebarButton > p {
     overflow: hidden;
+    white-space: nowrap;
     max-width: 0;
     font-size: 0.8em;
 }
@@ -34,6 +35,8 @@
     재시도시 SCSS이용해서 유지력 높은 코드 해보고 싶음
 
     추가로, sidebar NavLink의 p에 한글 / 띄어쓰기 넣으면 똑바로 작동안하는데 원인 분석
+        
+        => white-space: nowrap;으로 해결
 */
 /* .SlidebarButton.active > .userinfobg {
     color: rgba(184,232,252,1);
