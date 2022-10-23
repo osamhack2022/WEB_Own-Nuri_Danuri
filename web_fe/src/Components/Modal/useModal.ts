@@ -1,18 +1,18 @@
 import * as React from 'react';
 
 interface useModalReturn {
-    isPoped : boolean;
-    togglePop : () => void;
+    isPoped: boolean;
+    togglePop: () => void;
 }
 
-function useModal() : useModalReturn {
+function useModal(): useModalReturn {
     const [isPoped, setPop] = React.useState(true);
 
     function togglePop() {
-        setPop((prev)=>!prev);
+        setPop((prev) => !prev);
     }
 
-    return {isPoped, togglePop};
+    return { isPoped, togglePop };
 }
 
 export default useModal;

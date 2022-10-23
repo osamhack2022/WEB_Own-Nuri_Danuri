@@ -7,7 +7,7 @@ import Modal from '../../Components/Modal/Modal';
 import useModal from '../../Components/Modal/useModal';
 import LoginBox from './Login/LoginBox';
 
-import {HiArrowDown} from 'react-icons/hi'
+import { HiArrowDown } from 'react-icons/hi'
 
 
 const Main_page: React.FC = () => {
@@ -46,7 +46,7 @@ const Main_page: React.FC = () => {
                     <div id='MainWave3' className='MainWave inline-block absolute opacity-40' />
 
                     <div id='MainMoreInfo' className='absolute bottom-1/4 left-1/2 px-2 w-fit flex items-center text-white rounded-full'>
-                        <HiArrowDown className='w-4 h-4'/>
+                        <HiArrowDown className='w-4 h-4' />
                         <span className='pt-1 pl-2 text-base'>온누리?</span>
                     </div>
                 </div>
@@ -63,8 +63,8 @@ const Main_page: React.FC = () => {
 
             </div>
 
-            <Modal isPoped={isPoped}>
-                <LoginBox togglePop={togglePop}/>
+            <Modal isPoped={isPoped} togglePop={togglePop}>
+                <LoginBox />
             </Modal>
 
         </div>
