@@ -1,11 +1,18 @@
 #BenefitListMenu > button {
-    padding : 1em 0 0.5em;
-    width: 8em;
-    border-bottom: 2px solid black;
+    margin: 0 1em;
+    padding : 1em 0 0.3em;
+    width: 6em;
+
+    color: #999;
+    border-bottom: 1px solid;
+    font-size: 0.8em;
+
+    transition: linear 20ms;
 }
 #BenefitListMenu > button.active {
-    color: rgba(110, 133, 183, 1);
-    border-color: rgba(110, 133, 183, 1);
+    transform: scale(1.1);
+    color: black;
+    border-bottom: 2px solid rgb(110,133,183);
 }
 
 #ListBoard {

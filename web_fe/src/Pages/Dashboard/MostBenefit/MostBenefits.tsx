@@ -2,8 +2,7 @@ import * as React from 'react'
 import BenefitCard from './BenefitCard/BenefitCard';
 import './MostBenefitsStyle.css';
 
-import { HiOutlineChevronLeft, } from 'react-icons/hi'
-import { HiOutlineChevronRight } from 'react-icons/hi2';
+import { MdOutlineArrowLeft, MdOutlineArrowRight } from 'react-icons/md';
 import BenefitCardSet from './BenefitCard/BenefitCardSet';
 import useMostBenefit from './useMostBenefit';
 
@@ -20,10 +19,10 @@ const MostBenfits: React.FC = () => {
                 <BenefitCardSet id1={7} />
             </div>
 
-            <div id='MostBenefitController' className='absolute inline-block bg-red-500 bottom-8 right-8'>
-                <button onClick={slideLeft}><HiOutlineChevronLeft className='white'/></button>
-                <span>{slideNum}/3</span>
-                <button onClick={slideRight}><HiOutlineChevronRight className='white'/></button>
+            <div id='MostBenefitController' className='absolute bottom-8 right-10 w-20 rounded-full text-sm'>
+                <button onClick={slideLeft}><MdOutlineArrowLeft className='text-3xl'/></button>
+                <div className='mt-1'>{slideNum}/3</div>
+                <button onClick={slideRight}><MdOutlineArrowRight className='text-3xl'/></button>
             </div>
         </div>
     )

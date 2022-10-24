@@ -47,7 +47,7 @@ const Main_page: React.FC = () => {
 
                     <div id='MainMoreInfo' className='absolute bottom-1/4 left-1/2 px-2 w-fit flex items-center text-white rounded-full'>
                         <HiArrowDown className='w-4 h-4' />
-                        <span className='pt-1 pl-2 text-base'>온누리?</span>
+                        <span className='pt-1 pl-2 text-base'>About</span>
                     </div>
                 </div>
 
