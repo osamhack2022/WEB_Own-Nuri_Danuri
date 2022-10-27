@@ -38,7 +38,7 @@ app.listen('3000', () => console.log('Example app listening on port 3000!'))
 //211.42.154.87:3000
 
 
-app.use('/user_inform', user_inform);
+// app.use('/user_inform', user_inform);
 
 
 
