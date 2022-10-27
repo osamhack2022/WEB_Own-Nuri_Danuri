@@ -26,9 +26,22 @@ import express from 'express';
 const app = express();
 //const test = require("./router/test");
 const path = require('path')
+const user_inform = require('./routes/user_inform');
 const db = require('./config/db');
 
-app.listen('192.168.1.26:80', () => console.log('Example app listening on port 3000!'))
+
+
+
+
+
+app.listen('3000', () => console.log('Example app listening on port 3000!'))
+//211.42.154.87:3000
+
+
+app.use('/user_inform', user_inform);
+
+
+
 
 
 // db.query('SELECT 1', function (error, results, fields) {

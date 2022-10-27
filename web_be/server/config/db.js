@@ -1,9 +1,10 @@
 var mysql = require('mysql');
-var connection = mysql.createConnection({
+
+var db = mysql.createConnection({
   host     : '211.42.154.87',
   user     : 'root',
   password : '12345',
-  database : 'my_db',
+  database : 'user_db',
   port     : '3306'  
 });
  
@@ -18,17 +19,17 @@ var connection = mysql.createConnection({
 
 
 
-connection.connect();
+db.connect();
 
 
-connection.query('SELECT * from USERS', (error, rows, fields) => {
+db.query('SELECT * from USERS', (error, rows, fields) => {
   if (error) throw error;
   console.log('User info is: ', rows);
 });
 
 
 
-connection.end();
+// db.end();
 
 
 // const mysql = require('mysql');
@@ -56,4 +57,4 @@ connection.end();
 //     // })
 // // })
 
-// module.exports = db;
+module.exports = db;
