@@ -56,10 +56,10 @@ const Main_page: React.FC = () => {
             {/* ---------------Section #2--------------- */}
             <div id='MainSection2'>
 
-                <div id='MainIntro'>
+                {/* <div id='MainIntro'>
                     <PageIntro imgsrc='img1' explanation='explain1' />
                     <PageIntro imgsrc='img2' explanation='explain2' />
-                </div>
+                </div> */}
 
             </div>
 

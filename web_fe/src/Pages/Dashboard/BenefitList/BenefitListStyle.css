@@ -1,27 +1,60 @@
-#BenefitListMenu > button {
+#BenefitListMenu>button {
     margin: 0 1em;
-    padding : 1em 0 0.3em;
+    padding: 1em 0 0.3em;
     width: 6em;
 
-    color: #999;
+    color: #bbb;
     border-bottom: 1px solid;
     font-size: 0.8em;
 
     transition: linear 20ms;
 }
-#BenefitListMenu > button.active {
+
+#BenefitListMenu>button.active {
     transform: scale(1.1);
     color: black;
-    border-bottom: 2px solid rgb(110,133,183);
+    border-bottom: 2px solid rgb(110, 133, 183);
 }
 
 #ListBoard {
-    height: 75%;
+    height: 70%;
 }
 
-#PostsTitle {
+#PostTitle {
+    box-sizing: border-box;
     height: 10%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8em;
+    color: #999;
 }
+#PostTitle > div {
+    padding-top: 0.2em;
+}
+
+#dibs {
+    width: 5%;
+}
+
+#title {
+    width: 45%;
+    text-indent: 25px;
+}
+
+#author {
+    width: 15%;
+}
+
+#period {
+    width: 25%;
+}
+
+#like,
+#comment {
+    width: 5%;
+    /* text-align: center; */
+}
+
 #Posts {
     height: 90%;
 }
