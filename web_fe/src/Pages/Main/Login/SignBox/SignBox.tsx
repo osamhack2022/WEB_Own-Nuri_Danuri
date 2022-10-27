@@ -4,6 +4,7 @@ import './SignBoxStyle.css';
 
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import logo from '../../../../images/logo.png'
 
 interface props {
     certificate: boolean
@@ -29,6 +30,11 @@ const SignBox: React.FC<props> = ({ certificate }) => {
             <div id="SignBoxContainer" className='w-full'>
                 <form onSubmit={handleSubmit(onValid)} className='w-full'>
 
+                    <div id="SignBoxLogo">
+                        <img id='' src={logo} alt='OwnNuriLogo' className='inline-block w-12 h-12 bg-blue-800 rounded-full' />
+                        <p className='text-sm'>OwnNuri</p>
+                    </div>
+
                     <input {...register('id')} placeholder='군번' type='text' className='SignBoxInput' />
                     <input {...register('pw')} placeholder='비밀번호' type='password' className='SignBoxInput' />
                     <input {...register('armyunit')} placeholder='부대' type='text' className='SignBoxInput' />
@@ -45,6 +51,11 @@ const SignBox: React.FC<props> = ({ certificate }) => {
         return (
             <div id="SignBoxContainer" className='w-full'>
                 <form className='w-full'>
+
+                    <div id="SignBoxLogo">
+                        <img id='' src={logo} alt='OwnNuriLogo' className='inline-block w-12 h-12 bg-blue-800 rounded-full' />
+                        <p className='text-sm'>OwnNuri</p>
+                    </div>
 
                     <input {...register('id')} placeholder='군번' type='text' className='SignBoxInput' />
                     <input {...register('pw')} placeholder='비밀번호' type='password' className='SignBoxInput' />
