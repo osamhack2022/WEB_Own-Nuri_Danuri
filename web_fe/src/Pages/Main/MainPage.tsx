@@ -1,4 +1,4 @@
-import * as React from 'react';
+    import * as React from 'react';
 import './MainPageStyle.css';
 
 import Logo from '../../Components/Logo/Logo';

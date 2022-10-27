@@ -39,9 +39,6 @@ const BenefitList: React.FC = () => {
                     <PostPreview
                         id={1} title={'병 자기개발 비용'} type={'이벤트'} author={'육군'}
                         period={'21.04.26 - 22.10.25'} like={1} comment={1} />
-                    {/* <PostPreview
-                        id={1} title={'병 자기개발 비용'} type={'이벤트'} author={'육군'}
-                        period={'21.04.26 - 22.10.25'} like={1} comment={1} />
                     <PostPreview
                         id={1} title={'병 자기개발 비용'} type={'이벤트'} author={'육군'}
                         period={'21.04.26 - 22.10.25'} like={1} comment={1} />
@@ -65,7 +62,10 @@ const BenefitList: React.FC = () => {
                         period={'21.04.26 - 22.10.25'} like={1} comment={1} />
                     <PostPreview
                         id={1} title={'병 자기개발 비용'} type={'이벤트'} author={'육군'}
-                        period={'21.04.26 - 22.10.25'} like={1} comment={1} /> */}
+                        period={'21.04.26 - 22.10.25'} like={1} comment={1} />
+                    <PostPreview
+                        id={1} title={'병 자기개발 비용'} type={'이벤트'} author={'육군'}
+                        period={'21.04.26 - 22.10.25'} like={1} comment={1} />
                 </div>
                 
             </div>
