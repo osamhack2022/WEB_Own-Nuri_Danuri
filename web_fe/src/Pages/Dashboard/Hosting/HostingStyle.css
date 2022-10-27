@@ -1,0 +1,26 @@
+#EditorContainer {
+    margin: 1em auto 0;
+    width: 85%;
+    height: 70%;
+    
+    overflow: scroll;
+}
+
+#EditorContainer > .quill > .ql-toolbar   {
+    
+}
+.ql-toolbar.ql-snow {
+    background-color: black !important;
+}
+}
+
+#EditorContainer .ql-editor {
+    width: 100%;
+    height: 500px;
+}
+
+#HostButton {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+}

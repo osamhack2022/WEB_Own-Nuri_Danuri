@@ -1,23 +1,55 @@
 import * as React from 'react';
 import './SidebarStyle.css'
+
 import { NavLink } from 'react-router-dom';
 import { HiOutlineUser, HiOutlineGift, HiOutlineClipboard, HiOutlineSpeakerphone } from 'react-icons/hi';
+import { BoardState } from './useSidebar';
 import Profile from '../../../Components/Profile/Profile';
-import useSidebar from './useSidebar';
 
-const Sidebar: React.FC = () => {
+interface Props {
+    isShowed: boolean
+    boardState: BoardState;
+    toggleState: (state: BoardState) => void;
+    bgColor: string;
+}
+
+const Sidebar: React.FC<Props> = ({ isShowed, boardState, toggleState, bgColor }) => {
     return (
         <div id="SidebarContainer" className='h-full'>
-            <div className='flex flex-col mt-8 h-2/3 justify-between items-center text-white'>
-                <div id="SideProfile" className='w-24 text-sm'>
-                    <Profile/>
-                </div>
+            {
+                isShowed ? (
+                    <div className='flex flex-col mt-8 h-fit justify-between items-center text-white'>
 
-                <NavLink className='p-1 border-2 border-white rounded-full' to='/dashboard/userinfo'><HiOutlineUser className='text-white'/></NavLink>
-                <NavLink className='p-1 border-2 border-white rounded-full' to='/dashboard/mostbenefits'><HiOutlineGift className='text-white'/></NavLink>
-                <NavLink className='p-1 border-2 border-white rounded-full' to='/dashboard/benefitlist'><HiOutlineClipboard className='text-white'/></NavLink>
-                <NavLink className='p-1 border-2 border-white rounded-full' to='/dashboard/hosting'><HiOutlineSpeakerphone className='text-white'/></NavLink>
-            </div>
+                        <div id="SideProfile" className='mb-6 w-24 text-sm'>
+                            <Profile />
+                        </div>
+
+                        <NavLink onClick={() => toggleState(BoardState.UserInfo)} to='/dashboard/userinfo'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineUser className={bgColor} />
+                            <p className={bgColor}>내 정보</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.MostBenefits)} to='/dashboard/mostbenefits'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineGift className={bgColor} />
+                            <p className={bgColor}>내 지갑</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.BenefitList)} to='/dashboard/benefitlist'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineClipboard className={bgColor} />
+                            <p className={bgColor}>게시판</p>
+                        </NavLink>
+
+                        <NavLink onClick={() => toggleState(BoardState.Hosting)} to='/dashboard/hosting'
+                            className={'SlidebarButton ' + bgColor}>
+                            <HiOutlineSpeakerphone className={bgColor} />
+                            <p className={bgColor}>주최하기</p>
+                        </NavLink>
+
+                    </div>) : null
+            }
         </div>
     );
 };

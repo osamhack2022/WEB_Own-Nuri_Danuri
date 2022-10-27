@@ -1,0 +1,54 @@
+#SignBoxContainer {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 2em 0;
+    width: 100%;
+    height: 60%;
+
+    background-color: white;
+}
+
+.SignBoxInput {
+    display: block;
+    margin: 1em auto;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    padding: 0.8em 0;
+    width: 90%;
+
+    color: black;
+    text-indent: 1em;
+    /* box-shadow: 1px 1px 1px 1px #ccc; */
+}
+
+input::-webkit-input-placeholder {
+    /* placeholder 글자색 변경(크롬 적용) */
+    color: #bbb;
+}
+
+#SignBoxSubmit {
+    display: inline-block;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    padding: 0.6em 0 0.4em;
+    width: 40%;
+
+    border: 2px solid #5498ff;
+    cursor: pointer;
+    background-color: #5498ff;
+    color: white;
+}
+#SignBoxSubmit:hover {
+    color: #5498ff;
+    background-color: white;
+
+}
+
+#SignBoxLogo {
+    font-family: 'NEXONFootballGothicBA1';
+    color: rgb(30 64 175);
+}
+#SignBoxLogo > p {
+    margin-top: 4px;
+}
