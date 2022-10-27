@@ -13,7 +13,7 @@ const MostBenfits: React.FC = () => {
     return (
         <div id='MostBenefitContainer' className='overflow-hidden relative h-full bg-white'>
 
-            <div id={`Slide${slideNum}`} className='MostBenefitSlide absolute h-1/3 flex bg-gray-100'>
+            <div id={`Slide${slideNum}`} className='MostBenefitSlide absolute h-full flex'>
                 <BenefitCardSet id1={1} id2={2} id3={3} />
                 <BenefitCardSet id1={4} id2={5} id3={6} />
                 <BenefitCardSet id1={7} />
